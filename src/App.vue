@@ -20,7 +20,6 @@ export default {
   },
   data() {
     return {
-      com: 'HelloWorld',
       topNum: 0,
       topt: null
     }
