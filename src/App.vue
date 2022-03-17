@@ -1,23 +1,22 @@
 <template>
   <div id="app" :style="{ '--top': `${topNum}px` }">
     <div class="appwarp">
-      <component :is="com"></component>
+      <hello-world></hello-world>
     </div>
     <div class="btnwarp">
-      <button @click="change(3)">top</button>
-      <button @click="change(-3)">bottom</button>
+      <button @click="change(-3)">top</button>
+      <button @click="change(3)">bottom</button>
     </div>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import HeWord from './components/HeWord.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld, HeWord
+    HelloWorld
   },
   data() {
     return {
@@ -35,7 +34,7 @@ export default {
         this.topt = null
       }
       else this.topt = setInterval(() => {
-        this.topNum -= type
+        this.topNum += type
       }, 10);
     }
 
@@ -49,7 +48,6 @@ html {
 }
 .appwarp {
   height: 100vh;
-  // padding-top: 200px;
   transform: translateY(var(--top));
 }
 .btnwarp {
