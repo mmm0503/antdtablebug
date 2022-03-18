@@ -16,7 +16,7 @@ import HelloWorld from './components/HelloWorld.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
   },
   data() {
     return {
@@ -34,7 +34,8 @@ export default {
       }
       else this.topt = setInterval(() => {
         this.topNum += type
-      }, 10);
+      }, 1);
+
     }
 
   },
@@ -52,6 +53,18 @@ html {
 .btnwarp {
   position: fixed;
   bottom: 0;
-  z-index: 999;
+}
+
+.ant-table-fixed-left,
+.ant-table-fixed-right {
+  border: 1px solid red;
+  min-height: 200px;
+  transform: translateY(-50px);
+  // z-index: 9999 !important;
+}
+.ant-table th,
+.ant-table td {
+}
+.ant-table-fixed {
 }
 </style>

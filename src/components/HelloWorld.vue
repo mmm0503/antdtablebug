@@ -1,6 +1,11 @@
 <template>
   <div class="box">
-    <a-table :columns="columns" :data-source="data" :scroll="{ x: 1500 }">
+    <a-table
+      :columns="columns"
+      :data-source="data"
+      :scroll="{ x: 1500, y: 600 }"
+      :pagination="false"
+    >
       <a slot="action" slot-scope="text">action</a>
     </a-table>
   </div>
@@ -26,7 +31,7 @@ const columns = [
 ];
 
 const data = [];
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 1; i++) {
   data.push({
     key: i,
     name: `Edrward ${i}`,
