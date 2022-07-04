@@ -11,35 +11,32 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld,
+    HelloWorld
   },
   data() {
     return {
       topNum: 0,
       topt: null
-    }
+    };
   },
-  mounted() {
-  },
+  mounted() {},
   methods: {
     change(type) {
       if (this.topt) {
-        clearInterval(this.topt)
-        this.topt = null
-      }
-      else this.topt = setInterval(() => {
-        this.topNum += type
-      }, 1);
-
+        clearInterval(this.topt);
+        this.topt = null;
+      } else
+        this.topt = setInterval(() => {
+          this.topNum += type;
+        }, 1);
     }
-
-  },
-}
+  }
+};
 </script>
 
 <style lang="less">
@@ -58,13 +55,7 @@ html {
 .ant-table-fixed-left,
 .ant-table-fixed-right {
   border: 1px solid red;
-  min-height: 200px;
-  transform: translateY(-50px);
-  // z-index: 9999 !important;
-}
-.ant-table th,
-.ant-table td {
-}
-.ant-table-fixed {
+  // min-height: 200px;
+  // transform: translateY(-50px);
 }
 </style>
